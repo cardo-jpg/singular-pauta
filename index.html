@@ -3,279 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pauta · Singular · 16/09</title>
+<title>Pauta · Singular · 30/09</title>
 <style>
   :root{
-    --paper:#F4F1EA; --card:#FBFAF6; --soft:#EFEBE2;
-    --ink:#1B1620; --ink-2:#3B3340; --muted:#6A6072; --line:#E3DCD0; --line-2:#D5CCBD;
-    --blue:#1D4ED8; --blue-wash:#E9F0FE; --good:#1C8A54; --good-wash:#EAF5EE;
-    --warn:#B7791F; --warn-wash:#FBF3E2; --bad:#C7371F; --bad-wash:#FBEDEA;
+    --paper:#f7f7f7; --card:#fcfcfc; --soft:#efefef;
+    --ink:#000; --ink2:#000; --muted:#555; --line:#d9d9d9; --line2:#ebebeb;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{font-size:112%;-webkit-text-size-adjust:100%;}
-  body{background:var(--paper);color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  body{background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55;}
   .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
-  b{font-weight:650;color:var(--ink);}
+  b{font-weight:bold;}
 
-  header{padding:52px 0 34px;border-bottom:1px solid var(--line);}
-  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);}
-  h1{font-size:clamp(2.1rem,5.5vw,3.1rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin-top:12px;}
-  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;color:var(--muted);font-size:.9rem;}
-  .meta span b{color:var(--ink-2);}
-  .lead{margin-top:18px;font-size:1.05rem;color:var(--ink-2);max-width:62ch;}
+  header{padding:44px 0 28px;border-bottom:2px solid #000;}
+  .eyebrow{font-size:.74rem;font-weight:bold;letter-spacing:.16em;text-transform:uppercase;}
+  h1{font-size:clamp(1.9rem,5vw,2.7rem);font-weight:bold;line-height:1.1;margin-top:10px;}
+  .meta{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:16px;font-size:.9rem;color:var(--muted);}
+  .meta b{color:#000;}
+  .lead{margin-top:16px;font-size:1.02rem;max-width:64ch;}
 
-  .agenda{margin:30px 0 0;border:1px solid var(--line-2);border-radius:14px;background:var(--card);overflow:hidden;}
-  .agenda a{display:grid;grid-template-columns:38px 1fr auto;gap:12px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;}
+  .agenda{margin-top:26px;border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden;}
+  .agenda a{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--line2);text-decoration:none;color:#000;}
   .agenda a:last-child{border-bottom:none;}
-  .agenda a:hover{background:var(--blue-wash);}
-  .agenda .n{width:28px;height:28px;border-radius:8px;background:var(--blue-wash);color:var(--blue);font-weight:800;display:grid;place-items:center;font-size:.85rem;}
-  .agenda .t{font-weight:600;}
-  .agenda .m{font-size:.82rem;color:var(--muted);white-space:nowrap;}
+  .agenda .n{width:24px;height:24px;border-radius:5px;background:var(--soft);font-weight:bold;display:grid;place-items:center;font-size:.82rem;}
+  .agenda .t{font-weight:bold;font-size:.95rem;}
+  .agenda .m{font-size:.8rem;color:var(--muted);white-space:nowrap;}
 
-  section{padding:44px 0;border-bottom:1px solid var(--line);}
-  .sh{display:flex;align-items:baseline;gap:14px;margin-bottom:18px;flex-wrap:wrap;}
-  .sh .n{font-size:.8rem;font-weight:800;color:#fff;background:var(--blue);border-radius:7px;padding:3px 9px;}
-  .sh h2{font-size:1.55rem;font-weight:800;letter-spacing:-.01em;}
-  .sh .min{font-size:.82rem;color:var(--muted);margin-left:auto;}
-  p.body{color:var(--ink-2);max-width:68ch;margin-top:10px;}
+  section{padding:38px 0;border-bottom:1px solid var(--line);}
+  .sh{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+  .sh .n{font-size:.78rem;font-weight:bold;color:#fff;background:#000;border-radius:5px;padding:2px 8px;}
+  .sh h2{font-size:1.4rem;font-weight:bold;}
+  .sh .min{font-size:.8rem;color:var(--muted);margin-left:auto;}
+  p.body{margin-top:10px;max-width:70ch;}
 
-  .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:18px;}
-  .num{background:var(--card);border:1px solid var(--line-2);border-radius:14px;padding:18px 18px 16px;}
-  .num .v{font-size:2.1rem;font-weight:800;letter-spacing:-.02em;line-height:1;}
-  .num .k{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:10px;}
-  .num .d{font-size:.9rem;color:var(--ink-2);margin-top:6px;}
-  .num.blue .v{color:var(--blue);} .num.good .v{color:var(--good);}
+  .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:16px;}
+  .num{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--card);}
+  .num .v{font-size:1.7rem;font-weight:bold;line-height:1;}
+  .num .k{font-size:.7rem;font-weight:bold;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-top:8px;}
+  .num .d{font-size:.85rem;margin-top:5px;}
 
-  .days{display:grid;grid-template-columns:repeat(13,1fr);gap:5px;margin-top:20px;align-items:end;}
-  .day{text-align:center;}
-  .day .bar{height:86px;display:flex;align-items:flex-end;justify-content:center;}
-  .day .fill{width:100%;max-width:44px;border-radius:6px 6px 2px 2px;background:var(--blue);color:#fff;font-size:.78rem;font-weight:700;display:flex;align-items:flex-start;justify-content:center;padding-top:3px;min-height:22px;}
-  .day.off .fill{background:repeating-linear-gradient(45deg,var(--soft),var(--soft) 5px,var(--line-2) 5px,var(--line-2) 10px);color:var(--muted);min-height:22px;}
-  .day .dt{font-size:.68rem;color:var(--muted);margin-top:5px;}
-  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-top:12px;}
-  .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px;}
-
-  .gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px;}
-  .g{background:var(--card);border:1px solid var(--line-2);border-radius:12px;padding:14px 16px;}
-  .g .w{font-weight:800;color:var(--blue);}
-  .g p{font-size:.9rem;color:var(--ink-2);margin-top:4px;}
-
-  .list{display:grid;gap:10px;margin-top:16px;}
-  .item{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;background:var(--card);border:1px solid var(--line-2);border-radius:12px;padding:14px 16px;}
-  .item .ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.95rem;}
-  .item.ok .ic{background:var(--good-wash);color:var(--good);}
-  .item.warn .ic{background:var(--warn-wash);color:var(--warn);}
-  .item.q .ic{background:var(--blue-wash);color:var(--blue);}
-  .item h4{font-size:1.02rem;font-weight:700;}
-  .item p{font-size:.93rem;color:var(--ink-2);margin-top:3px;}
-
-  .versus{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
-  @media(max-width:640px){.versus{grid-template-columns:1fr;} .days{gap:3px;} .day .fill{font-size:.64rem;}}
-  .vs{background:var(--card);border:1px solid var(--line-2);border-radius:14px;padding:16px 18px;}
-  .vs.win{border-color:rgba(28,138,84,.4);background:var(--good-wash);}
-  .vs .tag{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
-  .vs.win .tag{color:var(--good);}
-  .vs .big{font-size:1.8rem;font-weight:800;margin-top:6px;}
-  .vs p{font-size:.9rem;color:var(--ink-2);margin-top:4px;}
-
-  .funnel{margin-top:18px;display:grid;gap:8px;}
-  .fr{display:grid;grid-template-columns:170px 1fr 90px;gap:12px;align-items:center;}
-  .fr .l{font-weight:600;font-size:.95rem;}
-  .fr .track{height:26px;background:var(--soft);border-radius:7px;overflow:hidden;}
-  .fr .f{height:100%;background:var(--blue);border-radius:7px;}
-  .fr.unk .f{background:repeating-linear-gradient(45deg,var(--warn-wash),var(--warn-wash) 6px,#EED9A8 6px,#EED9A8 12px);}
-  .fr .v{text-align:right;font-weight:800;}
-  .fr.unk .v{color:var(--warn);font-size:.9rem;}
-  @media(max-width:640px){.fr{grid-template-columns:110px 1fr 70px;}}
-
-  table.who{width:100%;border-collapse:collapse;margin-top:16px;background:var(--card);border:1px solid var(--line-2);border-radius:12px;overflow:hidden;}
-  table.who th{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line-2);}
-  table.who td{padding:12px 14px;border-bottom:1px solid var(--line);font-size:.93rem;color:var(--ink-2);vertical-align:top;}
-  table.who tr:last-child td{border-bottom:none;}
-  .who-tag{display:inline-block;font-size:.72rem;font-weight:800;padding:3px 9px;border-radius:20px;white-space:nowrap;}
-  .who-tag.c{background:var(--blue-wash);color:var(--blue);}
-  .who-tag.s{background:var(--good-wash);color:var(--good);}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.92rem;}
+  th{background:var(--paper);border-bottom:1px solid var(--line);text-align:left;padding:9px 12px;
+     font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:bold;}
+  td{border-bottom:1px solid var(--line2);padding:10px 12px;vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .right{text-align:right;white-space:nowrap;}
   .tscroll{overflow-x:auto;}
 
-  .note{margin-top:16px;padding:12px 16px;border-left:3px solid var(--warn);background:var(--warn-wash);border-radius:0 10px 10px 0;font-size:.9rem;color:var(--ink-2);}
-  .blank{margin-top:14px;border:1px dashed var(--line-2);border-radius:12px;padding:14px 16px;background:var(--card);}
-  .blank .row{border-bottom:1px solid var(--line);height:34px;}
-  .blank .row:last-child{border-bottom:none;}
-  footer{padding:34px 0 50px;color:var(--muted);font-size:.85rem;}
+  .list{display:grid;gap:9px;margin-top:14px;}
+  .item{display:grid;grid-template-columns:28px 1fr;gap:11px;align-items:start;border:1px solid var(--line);border-radius:8px;padding:13px 15px;background:var(--card);}
+  .item .ic{width:22px;height:22px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-weight:bold;font-size:.8rem;}
+  .item h4{font-size:.98rem;font-weight:bold;}
+  .item p{font-size:.9rem;margin-top:3px;}
 
-  @media print{
-    html{font-size:95%;} body{background:#fff;}
-    .agenda a:hover{background:none;}
-    section{page-break-inside:avoid;padding:24px 0;}
-    header{padding:20px 0;}
-  }
+  .box{border:1px solid var(--line);border-left:4px solid #000;border-radius:0 8px 8px 0;padding:13px 16px;margin-top:14px;background:var(--paper);font-size:.92rem;max-width:74ch;}
+
+  .blank{margin-top:14px;border:1px dashed var(--line);border-radius:8px;padding:13px 16px;background:var(--card);}
+  .blank .lbl{font-size:.7rem;font-weight:bold;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);}
+  .blank .row{border-bottom:1px solid var(--line2);height:32px;}
+  .blank .row:last-child{border-bottom:none;}
+
+  .who{display:inline-block;font-size:.72rem;font-weight:bold;padding:2px 8px;border-radius:20px;background:var(--soft);white-space:nowrap;}
+  footer{padding:28px 0 46px;color:var(--muted);font-size:.85rem;}
+
+  @media print{html{font-size:94%;} section{page-break-inside:avoid;padding:20px 0;} header{padding:16px 0;}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <div class="eyebrow">Reunião de acompanhamento · Cardô Marketing</div>
-    <h1>Singular · como estão os anúncios</h1>
+    <div class="eyebrow">Reunião semanal · Cardô Marketing</div>
+    <h1>Singular · pauta da reunião</h1>
     <div class="meta">
-      <span><b>Data:</b> 16/09/2026</span>
-      <span><b>Duração:</b> ~40 min</span>
-      <span><b>Período analisado:</b> 27/08 a 08/09</span>
+      <span><b>Data:</b> quarta, 30/09/2026</span>
+      <span><b>Duração:</b> 15 a 20 min</span>
+      <span><b>Números até:</b> 24/09</span>
     </div>
-    <p class="lead">O objetivo de hoje é simples: mostrar <b>o que aconteceu desde que os anúncios começaram</b>, explicar em português o que cada número quer dizer, e combinar <b>o que cada lado faz</b> nas próximas semanas.</p>
+    <p class="lead">A pauta de hoje tem três assuntos: <b>por que o custo por conversa subiu</b>, <b>os criativos novos que vão entrar</b> e <b>as decisões que estão travando a identidade visual e o site</b>.</p>
 
     <nav class="agenda">
-      <a href="#s1"><span class="n">1</span><span class="t">Linha do tempo: o que aconteceu até aqui</span><span class="m">5 min</span></a>
-      <a href="#s2"><span class="n">2</span><span class="t">Os números, traduzidos</span><span class="m">8 min</span></a>
-      <a href="#s3"><span class="n">3</span><span class="t">O que está funcionando</span><span class="m">5 min</span></a>
-      <a href="#s4"><span class="n">4</span><span class="t">O que precisa melhorar</span><span class="m">7 min</span></a>
-      <a href="#s5"><span class="n">5</span><span class="t">Perguntas para vocês</span><span class="m">10 min</span></a>
-      <a href="#s6"><span class="n">6</span><span class="t">Próximos passos: quem faz o quê</span><span class="m">5 min</span></a>
+      <a href="#s1"><span class="n">1</span><span class="t">Onde estamos</span><span class="m">3 min</span></a>
+      <a href="#s2"><span class="n">2</span><span class="t">O custo subiu: o que os números mostram</span><span class="m">5 min</span></a>
+      <a href="#s3"><span class="n">3</span><span class="t">Criativos novos</span><span class="m">4 min</span></a>
+      <a href="#s4"><span class="n">4</span><span class="t">Leads e atendimento</span><span class="m">3 min</span></a>
+      <a href="#s5"><span class="n">5</span><span class="t">Decisões pendentes</span><span class="m">4 min</span></a>
+      <a href="#s6"><span class="n">6</span><span class="t">Próximos passos</span><span class="m">2 min</span></a>
     </nav>
   </div>
 </header>
 
 <section id="s1">
   <div class="wrap">
-    <div class="sh"><span class="n">1</span><h2>Linha do tempo</h2><span class="min">5 min</span></div>
-    <p class="body">Os anúncios começaram em <b>27 de agosto</b>. Cada barra abaixo é um dia, e o número dentro é <b>quantas pessoas chamaram a Singular no WhatsApp</b> naquele dia por causa do anúncio.</p>
-
-    <div class="days">
-      <div class="day"><div class="bar"><div class="fill" style="height:44%">2</div></div><div class="dt">27/08</div></div>
-      <div class="day"><div class="bar"><div class="fill" style="height:66%">3</div></div><div class="dt">28/08</div></div>
-      <div class="day off"><div class="bar"><div class="fill" style="height:26%">–</div></div><div class="dt">29/08</div></div>
-      <div class="day off"><div class="bar"><div class="fill" style="height:26%">–</div></div><div class="dt">30/08</div></div>
-      <div class="day off"><div class="bar"><div class="fill" style="height:26%">–</div></div><div class="dt">31/08</div></div>
-      <div class="day off"><div class="bar"><div class="fill" style="height:26%">–</div></div><div class="dt">01/09</div></div>
-      <div class="day off"><div class="bar"><div class="fill" style="height:26%">–</div></div><div class="dt">02/09</div></div>
-      <div class="day off"><div class="bar"><div class="fill" style="height:26%">–</div></div><div class="dt">03/09</div></div>
-      <div class="day"><div class="bar"><div class="fill" style="height:44%">2</div></div><div class="dt">04/09</div></div>
-      <div class="day"><div class="bar"><div class="fill" style="height:100%">4</div></div><div class="dt">05/09</div></div>
-      <div class="day"><div class="bar"><div class="fill" style="height:66%">3</div></div><div class="dt">06/09</div></div>
-      <div class="day"><div class="bar"><div class="fill" style="height:34%">1</div></div><div class="dt">07/09</div></div>
-      <div class="day"><div class="bar"><div class="fill" style="height:26%">0</div></div><div class="dt">08/09</div></div>
+    <div class="sh"><span class="n">1</span><h2>Onde estamos</h2><span class="min">3 min</span></div>
+    <p class="body">Desde o começo dos anúncios, em 27 de agosto:</p>
+    <div class="nums">
+      <div class="num"><div class="v">R$ 1.128</div><div class="k">Investido</div><div class="d">de R$ 2.000 por mês</div></div>
+      <div class="num"><div class="v">36</div><div class="k">Conversas no WhatsApp</div><div class="d">em 23 dias de anúncio no ar</div></div>
+      <div class="num"><div class="v">R$ 31,33</div><div class="k">Custo por conversa</div><div class="d">média do período todo</div></div>
+      <div class="num"><div class="v">0</div><div class="k">Vendas</div><div class="d">meta: uma até o fim do ano</div></div>
     </div>
-    <div class="legend"><span><i style="background:var(--blue)"></i>anúncio no ar</span><span><i style="background:repeating-linear-gradient(45deg,var(--soft),var(--soft) 3px,var(--line-2) 3px,var(--line-2) 6px)"></i>anúncio parado</span></div>
-
-    <div class="list">
-      <div class="item q"><div class="ic">1</div><div><h4>27 e 28/08 — começamos</h4><p>2 dias no ar, <b>R$ 48,63</b> investidos, <b>5 conversas</b>.</p></div></div>
-      <div class="item warn"><div class="ic">!</div><div><h4>29/08 a 03/09 — 6 dias parado</h4><p>Nesse período o anúncio não apareceu para ninguém. Vale entendermos juntos o motivo.</p></div></div>
-      <div class="item q"><div class="ic">2</div><div><h4>04 a 08/09 — voltamos</h4><p>5 dias no ar, <b>R$ 232,85</b> investidos, <b>10 conversas</b>.</p></div></div>
-    </div>
+    <div class="box"><b>Contexto que vale repetir:</b> no alto padrão, o tempo entre o primeiro contato e a assinatura costuma ser de <b>um ano a um ano e meio</b>. Estamos no segundo mês. O que dá para cobrar agora é volume e qualidade de conversa, não venda fechada.</div>
   </div>
 </section>
 
 <section id="s2">
   <div class="wrap">
-    <div class="sh"><span class="n">2</span><h2>Os números, traduzidos</h2><span class="min">8 min</span></div>
-    <p class="body">Somando todo o período, do dia 27/08 ao dia 08/09:</p>
+    <div class="sh"><span class="n">2</span><h2>O custo subiu: o que os números mostram</h2><span class="min">5 min</span></div>
+    <p class="body">O custo por conversa passou de <b>R$ 29</b> na primeira quinzena para <b>R$ 51</b> na segunda. Na reunião passada levantamos duas causas: a troca do número de telefone e o desgaste do criativo. Olhando os números com calma, <b>as duas não pesam igual</b>.</p>
 
-    <div class="nums">
-      <div class="num"><div class="v">R$ 281</div><div class="k">Investido</div><div class="d">Todo o dinheiro que foi para o Instagram e Facebook.</div></div>
-      <div class="num"><div class="v">15 mil</div><div class="k">Vezes que o anúncio apareceu</div><div class="d">Foram 15.269 aparições na tela de alguém.</div></div>
-      <div class="num blue"><div class="v">15</div><div class="k">Conversas no WhatsApp</div><div class="d">Pessoas que viram o anúncio e chamaram a Singular.</div></div>
-      <div class="num good"><div class="v">R$ 18,77</div><div class="k">Custo de cada conversa</div><div class="d">R$ 281 ÷ 15 conversas.</div></div>
+    <div class="tscroll">
+    <table>
+      <thead><tr><th>Período</th><th class="right">Investido</th><th class="right">Cliques</th><th class="right">Conversas</th><th class="right">De cada 100 cliques</th><th class="right">Custo por conversa</th></tr></thead>
+      <tbody>
+        <tr><td><b>1 a 15/09</b></td><td class="right">R$ 674</td><td class="right">623</td><td class="right">23</td><td class="right">3,7 conversaram</td><td class="right">R$ 29</td></tr>
+        <tr><td><b>16 a 24/09</b></td><td class="right">R$ 406</td><td class="right">324</td><td class="right">8</td><td class="right">2,5 conversaram</td><td class="right">R$ 51</td></tr>
+      </tbody>
+    </table>
     </div>
 
-    <p class="body" style="margin-top:22px"><b>Quatro palavras que vão aparecer nos relatórios:</b></p>
-    <div class="gloss">
-      <div class="g"><div class="w">Lead</div><p>Uma pessoa interessada que entrou em contato. Aqui, é quem chamou no WhatsApp.</p></div>
-      <div class="g"><div class="w">CPL</div><p>"Custo por lead": quanto custou, em anúncio, cada pessoa que chamou. Hoje: R$ 18,77.</p></div>
-      <div class="g"><div class="w">CTR</div><p>De cada 100 pessoas que viram o anúncio, quantas clicaram. Hoje: pouco mais de 2.</p></div>
-      <div class="g"><div class="w">Público</div><p>O grupo de pessoas que o Instagram escolhe para mostrar o anúncio.</p></div>
+    <div class="list">
+      <div class="item"><div class="ic">1</div><div><h4>O anúncio continua chamando atenção</h4><p>A taxa de cliques até <b>subiu</b> no período (de 2,9% para 3,8%). Se fosse desgaste do criativo, a primeira coisa a cair seriam os cliques. Não caíram.</p></div></div>
+      <div class="item"><div class="ic">2</div><div><h4>A perda está depois do clique</h4><p>Antes, de cada 100 pessoas que clicavam, quase 4 puxavam conversa. Agora são 2,5. <b>Caiu um terço.</b> É exatamente o trecho do caminho onde entra o número de WhatsApp que foi trocado.</p></div></div>
+      <div class="item"><div class="ic">3</div><div><h4>O que precisamos conferir juntos</h4><p>Se o número novo está com <b>WhatsApp Business ativo</b>, com foto, nome da empresa e mensagem de saudação. Número novo, sem perfil montado e sem histórico, derruba a confiança de quem ia chamar. Vale testarmos ao vivo na reunião: clicar no anúncio e ver o que aparece.</p></div></div>
     </div>
+
+    <div class="box"><b>Por que isso importa:</b> se a causa for o número, trocar o criativo não resolve. Vamos fazer as duas coisas, mas na ordem certa: primeiro conferir o caminho do clique até a conversa, depois renovar o criativo.</div>
   </div>
 </section>
 
 <section id="s3">
   <div class="wrap">
-    <div class="sh"><span class="n">3</span><h2>O que está funcionando</h2><span class="min">5 min</span></div>
-
+    <div class="sh"><span class="n">3</span><h2>Criativos novos</h2><span class="min">4 min</span></div>
+    <p class="body">Até hoje, <b>tudo o que rodou foi um anúncio só</b>, o do Leblon. Isso muda agora.</p>
     <div class="list">
-      <div class="item ok"><div class="ic">✓</div><div><h4>As pessoas param para olhar o anúncio</h4><p>De cada 100 pessoas que viram, pouco mais de 2 clicaram (CTR de 2,26%). É um bom sinal: o anúncio do imóvel no Leblon chama atenção.</p></div></div>
-      <div class="item ok"><div class="ic">✓</div><div><h4>O anúncio está gerando conversas</h4><p>15 pessoas chamaram a Singular no WhatsApp em 7 dias de anúncio no ar, a R$ 18,77 cada.</p></div></div>
-      <div class="item ok"><div class="ic">✓</div><div><h4>Já aprendemos algo sobre o público</h4><p>Rodamos o <b>mesmo anúncio</b> para dois públicos diferentes, com praticamente a mesma verba:</p></div></div>
+      <div class="item"><div class="ic">A</div><div><h4>Carrossel do Ipanema, Barão de Jaguaribe</h4><p>Está pronto do lado de vocês. Assim que chegar, subimos. Os dois anúncios rodam juntos, dividindo a verba de R$ 2.000, sem prejudicar um ao outro.</p></div></div>
+      <div class="item"><div class="ic">B</div><div><h4>Trocar o criativo não é começar do zero</h4><p>Em muitos casos basta <b>trocar a primeira imagem</b> do carrossel e manter o resto. É rápido e já é lido como anúncio novo por quem vê.</p></div></div>
+      <div class="item"><div class="ic">C</div><div><h4>Colocar o Rio na peça</h4><p>Incluir uma imagem com Pão de Açúcar, Cristo ou a orla na última foto. Dá contexto de cidade para quem é de fora e reforça a região onde vocês atuam.</p></div></div>
     </div>
-
-    <div class="versus">
-      <div class="vs win"><div class="tag">Público aberto</div><div class="big">R$ 15,84</div><p>por conversa · 9 conversas</p><p>O Instagram escolhe sozinho quem vê.</p></div>
-      <div class="vs"><div class="tag">Público ADVGT</div><div class="big">R$ 23,15</div><p>por conversa · 6 conversas</p><p>Saiu 46% mais caro por conversa.</p></div>
-    </div>
-    <div class="note">Ainda são poucas conversas para ter certeza. A ideia é <b>colocar mais verba no público aberto</b> e confirmar isso nas próximas semanas — não desligar o outro de vez.</div>
+    <div class="box"><b>Como mandar o material:</b> pode ser pelo Drive ou avulso mesmo, por WhatsApp. O que precisamos de cada imóvel: fotos, valor, metragem, quartos e o ponto de referência do bairro.</div>
   </div>
 </section>
 
 <section id="s4">
   <div class="wrap">
-    <div class="sh"><span class="n">4</span><h2>O que precisa melhorar</h2><span class="min">7 min</span></div>
-
+    <div class="sh"><span class="n">4</span><h2>Leads e atendimento</h2><span class="min">3 min</span></div>
     <div class="list">
-      <div class="item warn"><div class="ic">1</div><div><h4>Temos um anúncio só</h4><p>Tudo o que rodou até agora foi <b>uma única imagem</b> (o imóvel no Leblon). Com o tempo, as mesmas pessoas cansam de ver a mesma coisa e o custo sobe. O ideal é ter <b>de 4 a 6 anúncios</b> rodando — outros imóveis, vídeos, tour pelo apartamento.</p></div></div>
-      <div class="item warn"><div class="ic">2</div><div><h4>O anúncio não pode ficar parando</h4><p>Toda vez que o anúncio para e volta, o Instagram "esquece" parte do que aprendeu sobre quem se interessa, e os primeiros dias saem mais caros. É melhor <b>verba menor todo dia</b> do que verba maior com pausas.</p></div></div>
-      <div class="item warn"><div class="ic">3</div><div><h4>Não sabemos o que aconteceu com as 15 conversas</h4><p>A gente enxerga até a pessoa chamar no WhatsApp. <b>Daí para frente, só vocês sabem.</b> E é essa parte que diz se o anúncio está trazendo cliente de verdade:</p></div></div>
+      <div class="item"><div class="ic">✓</div><div><h4>A qualidade está boa</h4><p>A maioria é investidor de verdade e gente da região. Praticamente não aparece contato fora do perfil, o que é raro num projeto tão novo.</p></div></div>
+      <div class="item"><div class="ic">✓</div><div><h4>Thiago reforçando o follow-up</h4><p>Como está indo? Quantas conversas foram retomadas e o que elas responderam?</p></div></div>
+      <div class="item"><div class="ic">!</div><div><h4>O CRM é o que destrava o próximo passo</h4><p>Quando chegarmos a <b>100 a 150 contatos registrados</b>, conseguimos pedir ao Meta que procure pessoas parecidas com quem já conversou com vocês. Isso costuma baratear bastante o custo por conversa. Sem o registro organizado, não dá para fazer.</p></div></div>
     </div>
-
-    <div class="funnel">
-      <div class="fr"><div class="l">Viram o anúncio</div><div class="track"><div class="f" style="width:100%"></div></div><div class="v">15.269</div></div>
-      <div class="fr"><div class="l">Clicaram</div><div class="track"><div class="f" style="width:62%"></div></div><div class="v">345</div></div>
-      <div class="fr"><div class="l">Chamaram no WhatsApp</div><div class="track"><div class="f" style="width:34%"></div></div><div class="v">15</div></div>
-      <div class="fr unk"><div class="l">Foram atendidos</div><div class="track"><div class="f" style="width:26%"></div></div><div class="v">?</div></div>
-      <div class="fr unk"><div class="l">Visitaram o imóvel</div><div class="track"><div class="f" style="width:18%"></div></div><div class="v">?</div></div>
-      <div class="fr unk"><div class="l">Fizeram proposta</div><div class="track"><div class="f" style="width:10%"></div></div><div class="v">?</div></div>
+    <div class="blank">
+      <div class="lbl">Anotações</div>
+      <div class="row"></div><div class="row"></div><div class="row"></div>
     </div>
-    <p class="body" style="font-size:.85rem;color:var(--muted)">As barras mostram as etapas, não estão em escala.</p>
   </div>
 </section>
 
 <section id="s5">
   <div class="wrap">
-    <div class="sh"><span class="n">5</span><h2>Perguntas para vocês</h2><span class="min">10 min</span></div>
-    <p class="body">Essa é a parte mais importante da reunião. As respostas mudam o que vamos fazer.</p>
+    <div class="sh"><span class="n">5</span><h2>Decisões pendentes</h2><span class="min">4 min</span></div>
+    <p class="body">São três, e todas travam alguma coisa.</p>
+    <div class="tscroll">
+    <table>
+      <thead><tr><th>Decisão</th><th>Com quem</th><th>O que está travado</th></tr></thead>
+      <tbody>
+        <tr><td><b>Nome: Singular Prime</b><br><span style="color:var(--muted);font-size:.85rem">em análise jurídica e contábil</span></td><td><span class="who">Singular</span></td><td>Identidade visual, endereço do site e perfil no Google. Nenhum começa antes do nome fechado.</td></tr>
+        <tr><td><b>Identidade visual</b><br><span style="color:var(--muted);font-size:.85rem">definição após a reunião interna</span></td><td><span class="who">Rodrigo</span> <span class="who">Elize</span></td><td>Instagram, site e as peças de anúncio, que precisam da mesma cara.</td></tr>
+        <tr><td><b>Desconto à vista</b><br><span style="color:var(--muted);font-size:.85rem">identidade + site + Google juntos</span></td><td><span class="who">Cardô</span></td><td>Consulta feita ao Victor. Resposta nesta reunião.</td></tr>
+      </tbody>
+    </table>
+    </div>
 
+    <p class="body" style="margin-top:20px"><b>Sobre o Instagram</b>, três combinados da conversa passada:</p>
     <div class="list">
-      <div class="item q"><div class="ic">?</div><div><h4>Das 15 pessoas que chamaram, como foram as conversas?</h4><p>Quantas responderam? Alguma marcou visita? Alguma fez proposta? Eram pessoas com perfil para comprar?</p></div></div>
-      <div class="item q"><div class="ic">?</div><div><h4>Quem atende o WhatsApp, e em quanto tempo responde?</h4><p>Quem é respondido em minutos conversa. Quem espera horas, normalmente já falou com outra imobiliária.</p></div></div>
-      <div class="item q"><div class="ic">?</div><div><h4>Quais imóveis vocês querem anunciar a seguir?</h4><p>E o que já existe de cada um: fotos boas, vídeo, tour, preço e condição de pagamento.</p></div></div>
-      <div class="item q"><div class="ic">?</div><div><h4>Por que o anúncio ficou parado de 29/08 a 03/09?</h4><p>Foi decisão, pagamento, algum problema na conta? Assim evitamos que aconteça de novo.</p></div></div>
-      <div class="item q"><div class="ic">?</div><div><h4>Qual é a verba mensal para os anúncios?</h4><p>Com esse número definimos quanto vai para cada imóvel e para cada público.</p></div></div>
+      <div class="item"><div class="ic">1</div><div><h4>Ritmo</h4><p>Um post por dia, ou dia sim dia não. Stories todo dia. Facebook não precisa de atenção: a cada 15 dias basta.</p></div></div>
+      <div class="item"><div class="ic">2</div><div><h4>Fugir do perfil catálogo</h4><p>Não pode ser só imóvel atrás de imóvel. Quem são vocês, onde atuam, a equipe. <b>Rodrigo, Thiago e Elize aparecendo</b> é o que gera confiança no alto padrão.</p></div></div>
+      <div class="item"><div class="ic">3</div><div><h4>Paleta limpa e constante</h4><p>Mesmas cores sempre. No alto padrão, constância comunica mais que variedade.</p></div></div>
     </div>
 
-    <div class="blank" aria-label="espaço para anotações">
-      <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Anotações da reunião</p>
-      <div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div>
-    </div>
+    <div class="box"><b>Sobre o site:</b> ele nasce ligado ao perfil do Google. As mesmas palavras que descrevem os imóveis no site precisam estar no Google, senão um atrapalha o outro na hora de aparecer na busca. A manutenção técnica fica com a Cardô, e vocês têm acesso para publicar.</div>
   </div>
 </section>
 
 <section id="s6">
   <div class="wrap">
-    <div class="sh"><span class="n">6</span><h2>Próximos passos</h2><span class="min">5 min</span></div>
-
+    <div class="sh"><span class="n">6</span><h2>Próximos passos</h2><span class="min">2 min</span></div>
     <div class="tscroll">
-    <table class="who">
-      <thead><tr><th>Quem</th><th>O quê</th><th>Para quando</th></tr></thead>
+    <table>
+      <thead><tr><th>Quem</th><th>O quê</th><th>Quando</th></tr></thead>
       <tbody>
-        <tr><td><span class="who-tag s">Singular</span></td><td>Enviar fotos, vídeos, preço e condição dos próximos imóveis a anunciar.</td><td>a combinar</td></tr>
-        <tr><td><span class="who-tag s">Singular</span></td><td>Anotar, para cada pessoa que chamar: <b>foi atendida? visitou? fez proposta?</b> Pode ser uma planilha simples — nós montamos o modelo.</td><td>a partir de hoje</td></tr>
-        <tr><td><span class="who-tag s">Singular</span></td><td>Definir quem responde o WhatsApp dos anúncios e tentar responder em poucos minutos.</td><td>a partir de hoje</td></tr>
-        <tr><td><span class="who-tag c">Cardô</span></td><td>Montar e enviar o modelo de planilha para acompanhar as conversas.</td><td>a combinar</td></tr>
-        <tr><td><span class="who-tag c">Cardô</span></td><td>Criar novos anúncios com o material recebido (meta: 4 a 6 anúncios no ar).</td><td>após receber o material</td></tr>
-        <tr><td><span class="who-tag c">Cardô</span></td><td>Colocar mais verba no público aberto e manter os anúncios rodando sem pausas.</td><td>esta semana</td></tr>
-        <tr><td><span class="who-tag c">Cardô</span></td><td>Trazer os números atualizados na próxima reunião.</td><td>próxima reunião</td></tr>
+        <tr><td><span class="who">Elize</span></td><td>Enviar o carrossel do projeto Ipanema para subirmos</td><td>esta semana</td></tr>
+        <tr><td><span class="who">Rodrigo</span> <span class="who">Elize</span></td><td>Fechar a decisão da identidade visual</td><td>após a reunião interna</td></tr>
+        <tr><td><span class="who">Singular</span></td><td>Confirmar o nome, para destravar site e Google</td><td>a definir</td></tr>
+        <tr><td><span class="who">Singular</span></td><td>Conferir o WhatsApp Business do número novo: foto, nome e saudação</td><td>até a próxima reunião</td></tr>
+        <tr><td><span class="who">Cardô</span></td><td>Responder sobre o desconto à vista</td><td>nesta reunião</td></tr>
+        <tr><td><span class="who">Cardô</span></td><td>Subir o carrossel novo e renovar a capa do anúncio atual</td><td>ao receber o material</td></tr>
+        <tr><td><span class="who">Cardô</span></td><td>Enviar o material de Spin Selling para o grupo</td><td>esta semana</td></tr>
       </tbody>
     </table>
     </div>
-
     <div class="blank">
-      <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Próxima reunião</p>
+      <div class="lbl">Próxima reunião</div>
       <div class="row"></div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">Cardô Marketing · Dados dos anúncios da Singular no Instagram e Facebook, de 27/08 a 08/09/2026.</div>
-</footer>
+<footer><div class="wrap">Cardô Marketing · Dados dos anúncios da Singular de 27/08 a 24/09/2026.</div></footer>
 
 </body>
 </html>
